@@ -1,10 +1,12 @@
 #AXIOMQ ASSIGNMENT
 
+*Note: same assignment writen in GOlang can be found here: https://github.com/spax021/AXIOMZADATAK
+
 # Test Strategy and Documentation
 
 ## Introduction
 
-This document outlines the test strategy, challenges faced, and suggestions related to the implementation and execution of automated tests for the `AXIOMZADATAK` project. The tests were developed using Java, Rest Assured and TestNG tools to cover both positive and negative scenarios for User and Order functionalities.
+This document outlines the test strategy, challenges faced, and suggestions related to the implementation and execution of automated tests for the `AXIOM` project. The tests were developed using Java, Rest Assured and TestNG tools to cover both positive and negative scenarios for User and Order functionalities.
 
 ## Test Strategy
 
