@@ -55,7 +55,7 @@ public class BaseApiTest {
 				+ "    \"email\": \"" + user.getEmail() + "\",\r\n"
 				+ "    \"status\": \"" + user.getStatus() + "\"\r\n" + "}";
 
-	Response response = given()
+		Response response = given()
 			.auth()
 			.basic(username, password)
 			.contentType(ContentType.JSON)
@@ -87,6 +87,25 @@ public class BaseApiTest {
 		return status;
 	}
 
+
+	public static Response updateOrder(OrderDTO order) {
+		String requestBody = "{\r\n" 
+				+ "    \"userId\": \"" + order.getUserId() + "\",\r\n" 
+				+ "    \"totalAmount\": \"" + order.getTotalAmount() + "\",\r\n"
+				+ "    \"status\": \"" + order.getStatus() + "\"\r\n" + "}";
+
+	Response response = given()
+			.auth()
+			.basic(username, password)
+			.contentType(ContentType.JSON)
+			.body(requestBody)
+			.when()
+			.post("/orders" + Integer.toString(order.getId()));
+	
+	return response;
+	}
+
+	
 	public static Response getUserByIdWithWrongCredentials(int id) {
 		Response response = given()
 				.auth()

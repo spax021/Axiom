@@ -63,4 +63,12 @@ public class UserDTO {
 		this.status = status;
 	}
 
+	public ArrayList<OrderDTO> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(ArrayList<OrderDTO> orders) {
+		this.orders = orders;
+	}
+
 }
